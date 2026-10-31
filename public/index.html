@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quick Note Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Quick Notes</h1>
+            <p>Capture your thoughts. Keep them organized.</p>
+        </header>
+
+        <section class="note-form">
+
+            <h2>Create a New Note</h2>
+
+            <form id="noteForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter note title"
+                    maxlength="100"
+                    required
+                >
+
+                <textarea
+                    id="content"
+                    placeholder="Write your note here..."
+                    maxlength="5000"
+                    required
+                ></textarea>
+<div class="form-buttons">
+
+    <button type="submit" id="submitButton">
+        + Add Note
+    </button>
+
+    <button
+        type="button"
+        id="cancelButton"
+        class="cancel-btn"
+        hidden
+    >
+        Cancel Edit
+    </button>
+
+</div>
+
+            </form>
+
+            <p id="message" role="status"></p>
+
+        </section>
+
+        <section class="notes-section">
+
+            <div class="section-heading">
+                <h2>My Notes</h2>
+                <span id="noteCount">0 Notes</span>
+            </div>
+
+            <div id="notesContainer" class="notes-grid">
+                <p>Loading notes...</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Quick Notes | Built with Node.js & Express</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
